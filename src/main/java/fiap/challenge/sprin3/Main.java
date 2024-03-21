@@ -1,4 +1,4 @@
-package org.example;
+package fiap.challenge.sprin3;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;

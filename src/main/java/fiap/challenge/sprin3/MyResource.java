@@ -1,4 +1,4 @@
-package org.example;
+package fiap.challenge.sprin3;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
