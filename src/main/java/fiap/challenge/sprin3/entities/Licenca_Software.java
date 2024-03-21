@@ -1,6 +1,7 @@
-package fiap.challenge.sprint3.entities;
+package fiap.challenge.sprin3.entities;
 
-import fiap.challenge.sprint3.repositories._IBaseRepository;
+import fiap.challenge.sprin3.repositories._IBaseRepository;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
