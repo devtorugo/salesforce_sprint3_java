@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="494c23b2-989e-4fac-9db9-9931276e78a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/infrastructure/OracleDbConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/services/CadastroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/CadastroResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/MyResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/MyResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/configuration/OracleDatabaseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/entities/Cadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/entities/Cadastro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/repositories/CadastroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/repositories/CadastroRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711148164763</updated>
-      <workItem from="1711459228937" duration="2195000" />
+      <workItem from="1711459228937" duration="3787000" />
     </task>
     <servers />
   </component>

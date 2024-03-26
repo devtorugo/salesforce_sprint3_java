@@ -17,12 +17,12 @@ public class CadastroRepository {
     public static final String TB_NAME = "CADASTRO";
 
     public List<Cadastro> getAll() {
-        List<Cadastro> cadastros = new ArrayList<>();
-        try (Connection conn = OracleDbConfiguration.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + TB_NAME + " ORDER BY ID")) {
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                Cadastro cadastro = new Cadastro(
+        var cadastros = new ArrayList<Cadastro>();
+        try (var conn = OracleDbConfiguration.getConnection();
+             var stmt = conn.prepareStatement("SELECT * FROM " + TB_NAME + " ORDER BY ID")) {
+             var rs = stmt.executeQuery();
+             while (rs.next()) {
+                cadastros.add(new Cadastro(
                         rs.getInt("ID"),
                         rs.getString("NOME"),
                         rs.getString("TELEFONE"),
@@ -31,11 +31,10 @@ public class CadastroRepository {
                         rs.getString("EMPRESA"),
                         rs.getString("IDIOMA"),
                         getRegiaoById(rs.getInt("REGIAO_ID")),
-                        getTermoById(rs.getInt("TERMO_ID"))
-                );
-                cadastros.add(cadastro);
+                        getTermoById(rs.getInt("TERMO_ID"))));
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             e.printStackTrace();
         }
         return cadastros;
@@ -134,4 +133,15 @@ public class CadastroRepository {
         }
         return termo;
     }
+
+    public void delete(int id) {
+        try (Connection conn = OracleDbConfiguration.getConnection();
+             PreparedStatement stmt = conn.prepareStatement("DELETE FROM " + TB_NAME + " WHERE ID = ?")) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
