@@ -2,7 +2,9 @@ package fiap.challenge.sprin3.entities;
 
 import fiap.challenge.sprin3.repositories._IBaseRepository;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Cadastro extends _BaseEntity implements _IBaseRepository {
     private String NOME;
@@ -31,13 +33,6 @@ public class Cadastro extends _BaseEntity implements _IBaseRepository {
         this.TERMO = TERMO;
     }
 
-
-
-    public Cadastro(String nome, String telefone, String email, String senha, String empresa, String idioma, String regiao, boolean termo) {
-    }
-
-    public Cadastro(int id, String nome, String telefone, String email, String senha, String empresa, String idioma, String regiao, boolean termo) {
-    }
 
 
     public String getNOME() {
@@ -116,6 +111,22 @@ public class Cadastro extends _BaseEntity implements _IBaseRepository {
                 ", REGIAO=" + REGIAO +
                 ", TERMO=" + TERMO +
                 "} " + super.toString();
+    }
+
+    public Map<Boolean, ArrayList<String>> validate() {
+        // trabalhar com uma lista de erros ao invés de fazer o throw de exceção direto no primeiro erro
+        // isso permite que o usuário veja todos os erros de uma vez
+        // e não apenas o primeiro erro que ocorreu
+        // assim ele pode corrigir todos os erros de uma vez
+        var errors = new ArrayList<String>();
+        if (NOME == null || NOME.isBlank())
+            errors.add("Nome do Cadastro não pode ser vazio");
+        if (SENHA == null)
+            errors.add("Senha do cadastro não pode ser vazio");
+
+        return !errors.isEmpty() ?
+                Map.of(false, errors) :
+                Map.of(true, errors);
     }
 
     @Override
