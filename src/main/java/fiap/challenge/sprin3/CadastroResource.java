@@ -1,9 +1,6 @@
 package fiap.challenge.sprin3;
-
 import fiap.challenge.sprin3.entities.Cadastro;
 import fiap.challenge.sprin3.repositories.CadastroRepository;
-import fiap.challenge.sprin3.services.CadastroService;
-
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
