@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="494c23b2-989e-4fac-9db9-9931276e78a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/utils/Log4jLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/utils/Logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/CadastroResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/CadastroResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/repositories/CadastroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fiap/challenge/sprin3/repositories/CadastroRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711148164763</updated>
-      <workItem from="1711459228937" duration="5313000" />
+      <workItem from="1711459228937" duration="5997000" />
     </task>
     <servers />
   </component>

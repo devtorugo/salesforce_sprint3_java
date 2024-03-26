@@ -5,6 +5,9 @@ import fiap.challenge.sprin3.entities.Cadastro;
 import fiap.challenge.sprin3.entities.Regiao;
 import fiap.challenge.sprin3.entities.Termo;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,14 +17,15 @@ import java.util.List;
 import java.util.Optional;
 
 public class CadastroRepository {
+    private static final Logger logger = LogManager.getLogger(CadastroRepository.class);
     public static final String TB_NAME = "CADASTRO";
 
     public List<Cadastro> getAll() {
         var cadastros = new ArrayList<Cadastro>();
         try (var conn = OracleDbConfiguration.getConnection();
              var stmt = conn.prepareStatement("SELECT * FROM " + TB_NAME + " ORDER BY ID")) {
-             var rs = stmt.executeQuery();
-             while (rs.next()) {
+            var rs = stmt.executeQuery();
+            while (rs.next()) {
                 cadastros.add(new Cadastro(
                         rs.getInt("ID"),
                         rs.getString("NOME"),
@@ -35,7 +39,7 @@ public class CadastroRepository {
             }
         }
         catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao buscar todos os cadastros", e);
         }
         return cadastros;
     }
@@ -60,7 +64,7 @@ public class CadastroRepository {
                 return Optional.of(cadastro);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao buscar cadastro com ID: " + id, e);
         }
         return Optional.empty();
     }
@@ -76,7 +80,7 @@ public class CadastroRepository {
             stmt.setString(6, cadastro.getIDIOMA());
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao criar cadastro", e);
         }
     }
 
@@ -92,7 +96,7 @@ public class CadastroRepository {
             stmt.setInt(7, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao atualizar cadastro com ID: " + id, e);
         }
     }
 
@@ -110,7 +114,7 @@ public class CadastroRepository {
                 );
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao buscar região por ID: " + regiaoId, e);
         }
         return regiao;
     }
@@ -129,7 +133,7 @@ public class CadastroRepository {
                 );
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao buscar termo por ID: " + termoId, e);
         }
         return termo;
     }
@@ -140,8 +144,7 @@ public class CadastroRepository {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Erro ao deletar cadastro com ID: " + id, e);
         }
     }
-
 }
