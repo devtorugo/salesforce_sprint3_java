@@ -1,11 +1,13 @@
-Plataforma de Cadastro de Usuários
-Objetivo
+<h1>Plataforma de Cadastro de Usuários<h1/>
+  
+<h2>Objetivo<h2/>
 O objetivo deste projeto é desenvolver uma plataforma de cadastros de usuários que permita às empresas registrar informações de seus clientes de forma eficiente e segura. A solução proposta visa simplificar o processo de gerenciamento de usuários, oferecendo funcionalidades para cadastrar, buscar, listar e remover registros de usuários.
 
-Escopo
+<h2>Escopo<h2/>
 A plataforma de cadastro de usuários consiste em um sistema Java que interage com um banco de dados Oracle para armazenar e recuperar informações dos usuários. A solução proposta garantirá a segurança dos dados dos usuários, evitando acesso não autorizado e mantendo a integridade das informações armazenadas. Além disso, a interface de usuário será intuitiva e fácil de usar, permitindo uma experiência de gerenciamento de usuários sem complicações.
 
-Funcionalidades
+<h2>Funcionalidades<h2/>
+  
 Cadastro de Novos Usuários: Permite o cadastro de novos usuários, incluindo informações como nome, telefone, e-mail, senha, empresa, idioma e aceitação de termos de serviço.
 
 Busca de Usuários por ID: Permite a busca rápida de usuários específicos através de seus identificadores únicos.
@@ -14,7 +16,8 @@ Listagem de Todos os Usuários: Exibe uma lista completa de todos os usuários d
 
 Remoção de Usuários por ID: Permite a remoção de registros de usuários do sistema com base em seus IDs.
 
-Protótipo
+<h2>Protótipo<h2/>
+  
 Funcionalidades do Protótipo Web
 Buscar serviços: Implementa uma barra de pesquisa para facilitar a busca por tipo de serviço.
 
@@ -36,7 +39,7 @@ Faça o teste grátis: Redireciona o usuário para o cadastro e, em seguida, per
 
 Saiba mais: Fornece informações detalhadas sobre o produto Salesforce Customer 360.
 
-Procedimentos para Rodar a Aplicação
+<h2>Procedimentos para Rodar a Aplicação<h2/>
 Configuração do Ambiente:
 
 Certifique-se de ter o Java Development Kit (JDK) instalado em sua máquina.
